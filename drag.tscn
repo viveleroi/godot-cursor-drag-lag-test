@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d1aq362358b5y" path="res://icon.svg" id="1_g5hq8"]
 [ext_resource type="Script" uid="uid://d22a6ilynfefh" path="res://drag.gd" id="2_q60ct"]
+[ext_resource type="Script" path="res://drag_process.gd" id="3_proc"]
 
 [node name="Control" type="Control" unique_id=301513221]
 layout_mode = 3
@@ -18,22 +19,47 @@ offset_bottom = 40.0
 texture = ExtResource("1_g5hq8")
 script = ExtResource("2_q60ct")
 
-[node name="Settings" type="VBoxContainer" parent="."]
+[node name="ProcessDragged" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_g5hq8")
+modulate = Color(0.3, 1.0, 0.3, 1)
+script = ExtResource("3_proc")
+
+[node name="Stats" type="Label" parent="."]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 260.0
+offset_bottom = 110.0
+mouse_filter = 2
+
+[node name="Settings" type="VBoxContainer" parent="." unique_id=754316624]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -210.0
+offset_left = -220.0
 offset_top = 10.0
 offset_right = -10.0
-offset_bottom = 100.0
+offset_bottom = 320.0
 grow_horizontal = 0
 
-[node name="OSMouse" type="CheckBox" parent="Settings"]
+[node name="MouseModeLabel" type="Label" parent="Settings"]
 layout_mode = 2
-text = "Use OS mouse"
+text = "Mouse mode"
 
-[node name="VSync" type="CheckBox" parent="Settings"]
+[node name="MouseMode" type="OptionButton" parent="Settings"]
 layout_mode = 2
-button_pressed = true
+
+[node name="VSyncLabel" type="Label" parent="Settings"]
+layout_mode = 2
 text = "VSync"
+
+[node name="VSync" type="OptionButton" parent="Settings"]
+layout_mode = 2
+
+[node name="Fullscreen" type="CheckBox" parent="Settings"]
+layout_mode = 2
+text = "Fullscreen"
