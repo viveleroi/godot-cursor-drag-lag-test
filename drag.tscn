@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dib62qwxqkbip"]
+[gd_scene format=3 uid="uid://dib62qwxqkbip"]
 
 [ext_resource type="Texture2D" uid="uid://d1aq362358b5y" path="res://icon.svg" id="1_g5hq8"]
 [ext_resource type="Script" uid="uid://d22a6ilynfefh" path="res://drag.gd" id="2_q60ct"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=301513221]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,9 +11,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2116702578]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_g5hq8")
 script = ExtResource("2_q60ct")
+
+[node name="Settings" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -210.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 100.0
+grow_horizontal = 0
+
+[node name="OSMouse" type="CheckBox" parent="Settings"]
+layout_mode = 2
+text = "Use OS mouse"
+
+[node name="VSync" type="CheckBox" parent="Settings"]
+layout_mode = 2
+button_pressed = true
+text = "VSync"
