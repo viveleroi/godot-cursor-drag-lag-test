@@ -132,4 +132,4 @@ A second green-tinted draggable follows the cursor on the opposite side of the i
 
 - [`DisplayServer.window_set_vsync_mode`](https://docs.godotengine.org/en/stable/classes/class_displayserver.html#class-displayserver-method-window-set-vsync-mode)
 - [`Input.set_custom_mouse_cursor`](https://docs.godotengine.org/en/stable/classes/class_input.html#class-input-method-set-custom-mouse-cursor)
-- The original observation that prompted this demo: drag-and-drop tutorials such as [this one](https://www.youtube.com/watch?v=uNepyWzSw80) look snappy in their videos, but reproducing them on a high-refresh display with VSync on exposes the gap.
+- The original observation that prompted this demo: drag-and-drop tutorials such as [this one](https://www.youtube.com/watch?v=uNepyWzSw80) look snappy in their videos, but conditions had to be right.
